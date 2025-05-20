@@ -1,0 +1,132 @@
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Applying Animations */
+.hero-content {
+  animation: slideInUp 0.8s ease-out;
+}
+
+.hero-image {
+  animation: scaleIn 1s ease-out 0.3s both;
+}
+
+.section-title {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.feature-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.gallery-item {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Button Animation */
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* Interactive Animations */
+.nav-link:hover {
+  transform: translateY(-2px);
+}
+
+.logo:hover {
+  animation: pulse 1s infinite;
+}
+
+.feature-icon {
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+input:focus, textarea:focus {
+  animation: pulse 0.5s;
+}
+
+/* Staggered Animations for Features */
+.features-grid .feature-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.features-grid .feature-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.features-grid .feature-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* Staggered Animations for Gallery */
+.gallery-grid .gallery-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.gallery-grid .gallery-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.gallery-grid .gallery-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.gallery-grid .gallery-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Form submission success animation */
+@keyframes success {
+  0% {
+    background-color: var(--color-success);
+    color: white;
+  }
+  100% {
+    background-color: var(--color-secondary);
+    color: white;
+  }
+}
+
+.success {
+  animation: success 2s;
+}
